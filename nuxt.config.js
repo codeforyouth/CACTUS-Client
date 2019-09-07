@@ -1,5 +1,12 @@
+require('dotenv').config()
+const {API_URL} = process.env
 
 export default {
+
+  env: {
+    API_URL
+  },
+
   mode: 'universal',
   /*
   ** Headers of the page
@@ -13,7 +20,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css', href: 'assets/css/now-ui-kit.css?v=1.2.0' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css' }
     ]
   },
@@ -33,6 +39,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/resource.js',
     '~/plugins/vue-plugin.client.js'
   ],
   /*
@@ -44,6 +51,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
