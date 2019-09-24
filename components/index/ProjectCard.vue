@@ -1,7 +1,7 @@
 <template>
 
   <div class="col-3 p-1">
-    <div class="card" @click.self="goDetailPage">
+    <div class="card" @click="goDetailPage">
       <img class="card-img-top" :src="project.images[0].url" alt="カードの画像">
       <div class="card-body">
         <h4 class="card-title font-weight-bold">{{project.name}}</h4>
