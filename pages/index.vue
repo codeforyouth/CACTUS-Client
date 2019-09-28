@@ -21,7 +21,7 @@
 
       try {
 
-        await store.dispatch('project/init')
+        await store.dispatch('project/list/init')
 
       }catch(e){
 
@@ -32,7 +32,7 @@
     },
 
     computed: {
-      ...mapGetters('project', ['projects'])
+      ...mapGetters('project/list', ['projects'])
     }
   }
 

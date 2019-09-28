@@ -24,8 +24,8 @@
     ],
 
     methods: {
-      goDetailPage(id){
-        this.$router.push( `/projects/${this.id}`)
+      goDetailPage(){
+        this.$router.push( `/projects/${this.project.id}`)
       }
     }
 
