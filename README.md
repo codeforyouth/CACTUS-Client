@@ -8,6 +8,8 @@
 # install dependencies
 $ yarn install
 
+#.env.developを参考にして, .envを修正
+
 # serve with hot reload at localhost:3000
 $ yarn dev
 
