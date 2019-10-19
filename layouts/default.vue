@@ -18,15 +18,19 @@
             </div>
           </form>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/">プロジェクト一覧</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/edit">プロジェクト投稿</a>
-            </li>
-            <li class="nav-item active">
+            <li class="nav-item" v-if="token">
               <a class="nav-link" href="/users/code">ユーザー情報</a>
             </li>
+            <li class="nav-item" v-if="token">
+              <a class="nav-link" @click="logout">LOGOUT</a>
+            </li>
+            <li class="nav-item" v-else>
+              <a class="nav-link" href="/auth/login">LOGIN</a>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -34,6 +38,21 @@
     <nuxt />
   </div>
 </template>
+
+<script>
+  export default {
+    computed: {
+      token(){
+        return this.$store.state.auth.cookies.token
+      }
+    },
+    methods: {
+      async logout(){
+        await this.$store.dispatch('auth/logout')
+      }
+    }
+  }
+</script>
 
 <style>
 </style>

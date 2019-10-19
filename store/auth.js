@@ -51,8 +51,6 @@ export const actions = {
 
     const {headers, data, error} = await this.$resource().get(`/oauth/login/callback`, query)
 
-    console.log(data)
-
     if(error) {
       throw new Error()
     }
