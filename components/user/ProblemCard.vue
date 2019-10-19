@@ -13,6 +13,7 @@
     props: [
       'problem',
     ],
+
     methods: {
       goIssuePage(e){
         e.preventDefault();
