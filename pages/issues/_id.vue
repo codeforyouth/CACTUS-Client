@@ -18,7 +18,7 @@
         <b-form-input type="text" placeholder="link" v-model="form.link"/>
       </b-form-group>
       <b-form-group id="input-group-3" label="Github URL:" label-for="input-3">
-        <b-form-input type="text" placeholder="repositoryUrl" v-model="form.repositoryUrl"/>
+        <b-form-input type="text" placeholder="repositoryUrl" v-model="form.repository_url"/>
       </b-form-group>
       <b-form-group id="input-group-4" label="メモ:" label-for="input-4" class="mb-5">
         <b-form-input type="text" placeholder="note" v-model="form.note"/>
@@ -48,21 +48,20 @@ export default {
 
   data(){
     return{
+
+      id: 0,
       form: {
         title: "",
         link: "",
-        repositoryUrl: "",
+        repository_url: "",
         note: ""
       }
     }
   },
   methods: {
-    submitSolution(e){
-      e.preventDefault();
-      console.log("this is title: ", this.form.title)
-      console.log("this is link: ", this.form.link)
-      console.log("this is repositoryUrl: ", this.form.repositoryUrl)
-      console.log("this is note: ", this.form.note)
+     async submitSolution(e){
+
+       await this.$store.dispatch('solution/create', {id: this.$route.params.id, body: this.form})
     }
   }
 }
