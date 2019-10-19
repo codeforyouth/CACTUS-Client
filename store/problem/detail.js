@@ -23,7 +23,6 @@ export const actions = {
 
   async init({ state, commit }, problem_id)
   {
-    console.log(problem_id)
     const {headers, data, error} = await this.$resource().get(`/problems/${problem_id}`)
 
     if(error){
