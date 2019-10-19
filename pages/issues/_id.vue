@@ -61,7 +61,29 @@ export default {
   methods: {
      async submitSolution(e){
 
-       await this.$store.dispatch('solution/create', {id: this.$route.params.id, body: this.form})
+       try {
+
+         await this.$store.dispatch('solution/create', {id: this.$route.params.id, body: this.form})
+
+         //投稿失敗処理
+         this.$notify({
+           type : "success",
+           title: '投稿完了',
+           text : '解決策を投稿しました！'
+         });
+
+         this.$router.push(`/users/code`)
+
+       }catch(e){
+
+         //投稿失敗処理
+         this.$notify({
+           type : "error",
+           title: '投稿失敗',
+           text : '投稿に失敗しました。入力の形式を確認してください'
+         });
+
+       }
     }
   }
 }

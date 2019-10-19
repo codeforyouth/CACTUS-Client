@@ -38,6 +38,9 @@
       </div>
     </nav>
     <nuxt />
+    <no-ssr>
+      <notifications width="100%" position="bottom"/>
+    </no-ssr>
   </div>
 </template>
 

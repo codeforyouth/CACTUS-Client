@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import mavonEditor from 'mavon-editor'
 
-Vue.use(mavonEditor)
+import VueNotification from 'vue-notification'
+
+Vue.use(VueNotification)
