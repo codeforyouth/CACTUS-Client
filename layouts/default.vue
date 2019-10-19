@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg bg-primary mb-0">
+    <nav class="navbar navbar-expand-lg bg-white mb-0">
       <div class="container">
         <a href="/" class="nav-brand">
           <img src="https://fontmeme.com/permalink/190825/d1fedb6ba99c6950dcc7a8f51f0ad212.png" border="0" class="mr-2" width="70">
@@ -9,8 +9,8 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <form class="form-inline ml-auto" data-background-color>
-            <div class="input-group">
+          <form class="form-inline ml-auto">
+            <div class="input-group mt-1">
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-search"></i></span>
               </div>
