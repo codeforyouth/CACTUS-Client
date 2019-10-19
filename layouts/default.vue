@@ -3,7 +3,9 @@
     <nav class="navbar navbar-expand-lg bg-white mb-0">
       <div class="container">
         <a href="/" class="nav-brand">
-          <img src="https://fontmeme.com/permalink/190825/d1fedb6ba99c6950dcc7a8f51f0ad212.png" border="0" class="mr-2" width="70">
+          <div class="bg-primary p-2">
+            <span class="font-weight-bold text-white">CACTUS</span>
+          </div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
