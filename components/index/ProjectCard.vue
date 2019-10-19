@@ -39,6 +39,6 @@
   object-fit:cover;
 }
 .card-body{
-  height:300px;
+  height:200px;
 }
 </style>
