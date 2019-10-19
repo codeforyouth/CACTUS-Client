@@ -26,8 +26,6 @@ export const actions = {
 
     const {headers, data, error} = await this.$resource().get(`/projects/${project_id}`)
 
-    console.log(data)
-
     if(error){
       throw new Error()
     }
