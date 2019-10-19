@@ -42,7 +42,7 @@
         </b-tab>
         <b-tab title="課題">
           <div class="container">
-            <problem-card v-for="problem in project.problems" :problem="problem"/>
+            <problem-card v-for="problem in project.problems" :key="problem.id" :problem="problem"/>
           </div>
         </b-tab>
       </b-tabs>
