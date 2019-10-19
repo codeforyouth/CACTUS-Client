@@ -6,11 +6,11 @@
     </div>
     <h3 class="font-weight-bold">作成プロジェクト一覧</h3>
     <div class="row">
-      <project-card :id="1"/>
-      <project-card :id="1"/>
-      <project-card :id="1"/>
-      <project-card :id="1"/>
-      <project-card :id="1"/>
+      <!--<project-card :id="1"/>-->
+      <!--<project-card :id="1"/>-->
+      <!--<project-card :id="1"/>-->
+      <!--<project-card :id="1"/>-->
+      <!--<project-card :id="1"/>-->
     </div>
   </div>
 </template>
